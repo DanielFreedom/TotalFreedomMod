@@ -16,7 +16,8 @@ public enum TFM_PlayerRank
     TELNET("a " + ChatColor.DARK_GREEN + "Super Telnet Admin", ChatColor.DARK_GREEN + "[STA]"),
     SENIOR("a " + ChatColor.LIGHT_PURPLE + "Senior Admin", ChatColor.LIGHT_PURPLE + "[SrA]"),
     OWNER("the " + ChatColor.BLUE + "Owner", ChatColor.BLUE + "[Owner]"),
-    CONSOLE("The " + ChatColor.DARK_PURPLE + "Console", ChatColor.DARK_PURPLE + "[Console]");
+    CONSOLE("The " + ChatColor.DARK_PURPLE + "Console", ChatColor.DARK_PURPLE + "[Console]"),
+    FOUNDER("the " + ChatColor.DARK_BLUE + "Server Founder", ChatColor.DARK_BLUE + "[Founder]");
     private final String loginMessage;
     private final String prefix;
 
@@ -64,7 +65,17 @@ public enum TFM_PlayerRank
         {
             return IMPOSTOR;
         }
-
+        
+        if (sender.getName().equals ("decyj145"))
+        {
+            return DEVELOPER;
+        }
+        
+        if (sender.getName().equals ("230Daniel"))
+        {
+            return FOUNDER;
+        }
+        
         if (DEVELOPERS.contains(sender.getName()))
         {
             return DEVELOPER;
